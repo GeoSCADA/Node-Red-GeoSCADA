@@ -14,6 +14,7 @@ Release note items for ClearSCADA version:
 
 Release note items for Geo SCADA version:
 22/7/20 Rename to Geo SCADA
+23/9/20 Fix paths in package.json, adjust guide document, change node names
 
 TODO
 -

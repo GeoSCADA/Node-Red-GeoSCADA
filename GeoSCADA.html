@@ -2,16 +2,16 @@
 
 node-red-contrib-GeoSCADA
 
-ToGeoSCADA
+set point value
 Send point data into GeoSCADA using its web service port.
 Data is sent into analogue, digital and string Internal Points.
 Supports value and time stamp.
 Does not support: Time points
 
-FromGeoSCADA
+get object data
 Get object summary data from GeoSCADA using its web service port.
 
-QryGeoSCADA
+query
 Get tabular SQL query data from GeoSCADA using its web service port.
 
 User credentials are supported.
@@ -93,9 +93,9 @@ Steve Beadle, stephen.beadle@schneider-electric.com
 	</div>
 </script>
 
-<!-- This creates and configures the onscreen elements of the ToGeoSCADA node  -->
+<!-- This creates and configures the onscreen elements of the set point value node  -->
 <!-- First, the content of the edit dialog is defined.                       -->
-<script type="text/x-red" data-template-name="ToGeoSCADA">
+<script type="text/x-red" data-template-name="set point value">
    <!-- data-template-name identifies the node type this is for              -->
 
    <!-- Each of the following divs creates a field in the edit dialog.       -->
@@ -135,7 +135,7 @@ Steve Beadle, stephen.beadle@schneider-electric.com
 
 
 <!-- Next, some simple help text is provided for the node.                   -->
-<script type="text/x-red" data-help-name="ToGeoSCADA">
+<script type="text/x-red" data-help-name="set point value">
    <!-- data-help-name identifies the node type this help is for             -->
    <!-- This content appears in the Info sidebar when a node is selected     -->
    <!-- The first <p> is used as the pop-up tool tip when hovering over a    -->
@@ -157,7 +157,7 @@ Steve Beadle, stephen.beadle@schneider-electric.com
 <!-- Finally, the node type is registered along with all of its properties   -->
 <!-- The example below shows a small subset of the properties that can be set-->
 <script type="text/javascript">
-    RED.nodes.registerType('ToGeoSCADA',{
+    RED.nodes.registerType('set point value',{
         category: 'GeoSCADA',    // the palette category
 		color:"#3DCD58",
         defaults: {             // defines the editable properties of the node
@@ -172,7 +172,7 @@ Steve Beadle, stephen.beadle@schneider-electric.com
         // set the icon (held in icons dir below where you save the node)
         icon: "GeoSCADA.png",     // saved in  icons/myicon.png
         label: function() {     // sets the default label contents
-            return this.name||this.topic||"ToGeoSCADA";
+            return this.name||this.topic||"set point value";
         },
         labelStyle: function() { // sets the class to apply to the label
             return this.name?"node_label_italic":"";
@@ -181,9 +181,9 @@ Steve Beadle, stephen.beadle@schneider-electric.com
     });
 </script>
 
-<!-- This creates and configures the onscreen elements of the FromGeoSCADA node  -->
+<!-- This creates and configures the onscreen elements of the get object data node  -->
 <!-- First, the content of the edit dialog is defined.                       -->
-<script type="text/x-red" data-template-name="FromGeoSCADA">
+<script type="text/x-red" data-template-name="get object data">
    <!-- data-template-name identifies the node type this is for              -->
 
    <!-- Each of the following divs creates a field in the edit dialog.       -->
@@ -214,7 +214,7 @@ Steve Beadle, stephen.beadle@schneider-electric.com
 
 
 <!-- Next, some simple help text is provided for the node.                   -->
-<script type="text/x-red" data-help-name="FromGeoSCADA">
+<script type="text/x-red" data-help-name="get object data">
    <!-- data-help-name identifies the node type this help is for             -->
    <!-- This content appears in the Info sidebar when a node is selected     -->
    <!-- The first <p> is used as the pop-up tool tip when hovering over a    -->
@@ -236,7 +236,7 @@ Steve Beadle, stephen.beadle@schneider-electric.com
 <!-- Finally, the node type is registered along with all of its properties   -->
 <!-- The example below shows a small subset of the properties that can be set-->
 <script type="text/javascript">
-    RED.nodes.registerType('FromGeoSCADA',{
+    RED.nodes.registerType('get object data',{
         category: 'GeoSCADA',    // the palette category
 		color:"#3DCD58",
         defaults: {             // defines the editable properties of the node
@@ -250,7 +250,7 @@ Steve Beadle, stephen.beadle@schneider-electric.com
         // set the icon (held in icons dir below where you save the node)
         icon: "GeoSCADA.png",     // saved in  icons/myicon.png
         label: function() {     // sets the default label contents
-            return this.name||this.topic||"FromGeoSCADA";
+            return this.name||this.topic||"get object data";
         },
         labelStyle: function() { // sets the class to apply to the label
             return this.name?"node_label_italic":"";
@@ -261,7 +261,7 @@ Steve Beadle, stephen.beadle@schneider-electric.com
 
 <!-- This creates and configures the onscreen elements of the QryGeoSCADA node  -->
 <!-- First, the content of the edit dialog is defined.                       -->
-<script type="text/x-red" data-template-name="QryGeoSCADA">
+<script type="text/x-red" data-template-name="query">
    <!-- data-template-name identifies the node type this is for              -->
 
    <!-- Each of the following divs creates a field in the edit dialog.       -->
@@ -292,7 +292,7 @@ Steve Beadle, stephen.beadle@schneider-electric.com
 
 
 <!-- Next, some simple help text is provided for the node.                   -->
-<script type="text/x-red" data-help-name="QryGeoSCADA">
+<script type="text/x-red" data-help-name="query">
    <!-- data-help-name identifies the node type this help is for             -->
    <!-- This content appears in the Info sidebar when a node is selected     -->
    <!-- The first <p> is used as the pop-up tool tip when hovering over a    -->
@@ -313,7 +313,7 @@ Steve Beadle, stephen.beadle@schneider-electric.com
 <!-- Finally, the node type is registered along with all of its properties   -->
 <!-- The example below shows a small subset of the properties that can be set-->
 <script type="text/javascript">
-    RED.nodes.registerType('QryGeoSCADA',{
+    RED.nodes.registerType('query',{
         category: 'GeoSCADA',    // the palette category
 		color:"#3DCD58",
         defaults: {             // defines the editable properties of the node
@@ -327,7 +327,7 @@ Steve Beadle, stephen.beadle@schneider-electric.com
         // set the icon (held in icons dir below where you save the node)
         icon: "GeoSCADA.png",     // saved in  icons/myicon.png
         label: function() {     // sets the default label contents
-            return this.name||this.topic||"QryGeoSCADA";
+            return this.name||this.topic||"query";
         },
         labelStyle: function() { // sets the class to apply to the label
             return this.name?"node_label_italic":"";

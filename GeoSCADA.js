@@ -160,8 +160,8 @@ module.exports = function(RED) {
 				// node.connected = true;
 				// console.log(cookies);
 				if (typeof cookies != 'undefined') {
-					node.userid = getcookie("GeoSCADAUSERID", cookies);
-					node.secureuserid = getcookie("GeoSCADASECUREUSERID", cookies);
+					node.userid = getcookie("CLEARSCADAUSERID", cookies);
+					node.secureuserid = getcookie("CLEARSCADASECUREUSERID", cookies);
 					console.log( node.userid);
 					console.log('Login complete. Calling data node.');
 					//Cascade to call data retrieve
@@ -276,7 +276,7 @@ module.exports = function(RED) {
 
     // Register the node by name. This must be called before overriding any of the
     // Node functions.
-    RED.nodes.registerType("ToGeoSCADA", UpdatePointNode);
+    RED.nodes.registerType("set point value", UpdatePointNode);
 
 	function sendGeoSCADATimeThenValue( node, msg) {
 		// first call GeoSCADA and update time value
@@ -316,8 +316,8 @@ module.exports = function(RED) {
 			"SOAPAction": saction,
 			"SCX-Client-Version": "6.77.5914",
 			"User-Agent": "ViewXCtrl",
-			"Cookie": "GeoSCADAUSERID={" + node.server.userid + "}; " + 
-					"GeoSCADASECUREUSERID={" + node.server.secureuserid + "}",
+			"Cookie": "CLEARSCADAUSERID={" + node.server.userid + "}; " + 
+					"CLEARSCADASECUREUSERID={" + node.server.secureuserid + "}",
 			"Content-Length": xmlToSend.length
 		  }
 		}
@@ -417,8 +417,8 @@ module.exports = function(RED) {
 			"SOAPAction": saction,
 			"SCX-Client-Version": "6.77.5914",
 			"User-Agent": "ViewXCtrl",
-			"Cookie": "GeoSCADAUSERID={" + node.server.userid + "}; " + 
-					"GeoSCADASECUREUSERID={" + node.server.secureuserid + "}",
+			"Cookie": "CLEARSCADAUSERID={" + node.server.userid + "}; " + 
+					"CLEARSCADASECUREUSERID={" + node.server.secureuserid + "}",
 			"Content-Length": xmlToSend.length
 		  }
 		}
@@ -549,7 +549,7 @@ module.exports = function(RED) {
 
     // Register the node by name. This must be called before overriding any of the
     // Node functions.
-    RED.nodes.registerType("FromGeoSCADA", GetObjectNode);
+    RED.nodes.registerType("get object data", GetObjectNode);
 	
 	
 	function getGeoSCADAValue( node, msg) {
@@ -570,8 +570,8 @@ module.exports = function(RED) {
 			"Content-Type": "text/xml",
 			"SCX-Client-Version": "6.77.5914",
 			"User-Agent": "ViewXCtrl",
-			"Cookie": "GeoSCADAUSERID={" + node.server.userid + "}; " + 
-					"GeoSCADASECUREUSERID={" + node.server.secureuserid + "}",
+			"Cookie": "CLEARSCADAUSERID={" + node.server.userid + "}; " + 
+					"CLEARSCADASECUREUSERID={" + node.server.secureuserid + "}",
 			"Content-Length": 0
 		  }
 		}
@@ -699,7 +699,7 @@ module.exports = function(RED) {
 
     // Register the node by name. This must be called before overriding any of the
     // Node functions.
-    RED.nodes.registerType("QryGeoSCADA", GetQueryNode);
+    RED.nodes.registerType("query", GetQueryNode);
 	
 	
 	function getGeoSCADAQuery( node, msg) {
@@ -720,8 +720,8 @@ module.exports = function(RED) {
 			"Content-Type": "text/xml",
 			"SCX-Client-Version": "6.77.5914",
 			"User-Agent": "ViewXCtrl",
-			"Cookie": "GeoSCADAUSERID={" + node.server.userid + "}; " + 
-					"GeoSCADASECUREUSERID={" + node.server.secureuserid + "}",
+			"Cookie": "CLEARSCADAUSERID={" + node.server.userid + "}; " + 
+					"CLEARSCADASECUREUSERID={" + node.server.secureuserid + "}",
 			"Content-Length": 0
 		  }
 		}
