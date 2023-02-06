@@ -4,7 +4,12 @@ node-red-GeoSCADA
 SAMPLE CODE FOR EDUCATION ONLY. THIS CODE MAY NOT BE CYBER-SECURE.
 YOU ARE RESPONSIBLE FOR IMPLEMENTING CYBER-SECURITY FEATURES.
 **********************************************************************
-
+It is recommended that you use HTTPS for accessing web servers. 
+Please review the login process in the nodes and ensure that the sample 
+is modified as required for cybersecurity in your environment, for 
+example to protect against Cross Site Forgery and other common 
+vulnerabilities.
+**********************************************************************
 This is offered as source code. It is not supported or warranted in any 
 way by Schneider Electric.
 
