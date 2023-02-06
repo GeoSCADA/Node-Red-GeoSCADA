@@ -1,5 +1,17 @@
 node-red-GeoSCADA
 ===================
+**********************************************************************
+SAMPLE CODE FOR EDUCATION ONLY. THIS CODE MAY NOT BE CYBER-SECURE.
+YOU ARE RESPONSIBLE FOR IMPLEMENTING CYBER-SECURITY FEATURES.
+**********************************************************************
+
+This is offered as source code. It is not supported or warranted in any 
+way by Schneider Electric.
+
+The source code is available for you to freely use, modify and extend to 
+suit your requirements or that of your clients. It is perhaps not the 
+most optimized, efficient or elegant code but we hope that its simplicity 
+will encourage engagement with Geo SCADA and explore new ideas.
 
 A <a href="http://nodered.org" target="_new">Node-RED</a> node to send/receive telemetry data with <a href="http://www.schneider-electric.com/en/product-range-presentation/61264-clearscada/" target="_new">Geo SCADA Expert</a>.
 

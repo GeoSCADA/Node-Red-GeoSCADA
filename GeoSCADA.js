@@ -7,6 +7,11 @@ Supports value and time stamp.
 Does not support: Time points, User credentials.
 For experimental use only, do not use on production SCADA systems.
 
+**********************************************************************
+SAMPLE CODE FOR EDUCATION ONLY. THIS CODE MAY NOT BE CYBER-SECURE.
+YOU ARE RESPONSIBLE FOR IMPLEMENTING CYBER-SECURITY FEATURES.
+**********************************************************************
+
 The MIT License (MIT)
 
 Copyright (c) 2020 Schneider Electric
